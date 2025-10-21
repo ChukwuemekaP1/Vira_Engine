@@ -8,15 +8,15 @@
     },
     {
       "trait_type": "Deed of Assignment Path",
-      "value": "nigeria_demo_data\\NGA-ENU-001_Deed_of_Assignment.txt"
+      "value": "nigeria_demo_data/NGA-ENU-001_Deed_of_Assignment.txt"
     },
     {
       "trait_type": "Public News API Path",
-      "value": "nigeria_demo_data\\Nigerian_Gazette_Alerts.json"
+      "value": "nigeria_demo_data/Nigerian_Gazette_Alerts.json"
     },
     {
       "trait_type": "Land Registry File Path",
-      "value": "nigeria_demo_data\\Nigerian_Land_Registry_Mock.csv"
+      "value": "nigeria_demo_data/Nigerian_Land_Registry_Mock.csv"
     },
     {
       "trait_type": "Registry Search Key",

@@ -1,20 +1,34 @@
-# VERA AI - SPRINT 2 (GEMINI API - DEBUGGING VERSION)
-# This is the definitive script for debugging the Gemini API connection issue.
-# It uses the robust ChatSession method.
+# =================================================================
+# Vira Engine - Main Application Module
+# =================================================================
+# This is the core module of the Vira Engine that handles property
+# risk analysis using Google's Gemini AI. It processes multiple data
+# sources to identify potential risks in Nigerian real estate
+# transactions.
+#
+# Key Features:
+# - Multi-source data integration
+# - AI-powered risk analysis
+# - Structured output format
+# - Error handling and logging
+# =================================================================
 
 import os
 import json
 import sys
 import traceback
-import google.generativeai as genai
-import pandas as pd
+import google.generativeai as genai  # Gemini AI SDK for risk analysis
+import pandas as pd  # For handling structured data
 
 # ========================================
 # CONFIGURATION
 # ========================================
-# --- IMPORTANT: PASTE YOUR GOOGLE API KEY HERE ---
-# This should be the key from your new, clean, and enabled Google Cloud project.
-API_KEY = "YOUR_GOOGLE_API_KEY_HERE"
+# Load environment variables
+from dotenv import load_dotenv
+load_dotenv()
+
+# Get API key from environment variables
+API_KEY = os.getenv('GEMINI_API_KEY')
 
 # Define data folders relative to this script's location
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -85,8 +99,8 @@ def run_llm_investigation(token_id: str) -> dict:
     # --- 3. Start a Chat Session with the AI ---
     try:
         print("[LLM Investigator] Initializing model and chat session...")
-        # Use a stable, proven model name
-        model = genai.GenerativeModel('gemini-1.0-pro')
+        # Use latest pro model
+        model = genai.GenerativeModel('gemini-pro-latest')
         
         system_instruction = """
         You are "Vera," an AI Risk Analyst. Your only job is to analyze data and respond with a single, specific JSON object.
