@@ -12,9 +12,12 @@ import pandas as pd
 # ========================================
 # CONFIGURATION
 # ========================================
-# --- IMPORTANT: PASTE YOUR GOOGLE API KEY HERE ---
-# This should be the key from your new, clean, and enabled Google Cloud project.
-API_KEY = "YOUR_GOOGLE_API_KEY_HERE"
+# Load environment variables
+from dotenv import load_dotenv
+load_dotenv()
+
+# Get API key from environment variables
+API_KEY = os.getenv('GEMINI_API_KEY')
 
 # Define data folders relative to this script's location
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -85,8 +88,8 @@ def run_llm_investigation(token_id: str) -> dict:
     # --- 3. Start a Chat Session with the AI ---
     try:
         print("[LLM Investigator] Initializing model and chat session...")
-        # Use a stable, proven model name
-        model = genai.GenerativeModel('gemini-1.0-pro')
+        # Use latest pro model
+        model = genai.GenerativeModel('gemini-pro-latest')
         
         system_instruction = """
         You are "Vera," an AI Risk Analyst. Your only job is to analyze data and respond with a single, specific JSON object.
