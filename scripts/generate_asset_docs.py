@@ -1,6 +1,18 @@
-# SPRINT 1, TASK 1.3 (REVISED)
-# VERA AI - DATA GENERATION SCRIPT
-# This script generates the individual asset documentation with varied dates.
+# =================================================================
+# Vira Engine - Asset Documentation Generator
+# =================================================================
+# Purpose: This script generates sample property documentation for
+# testing and development purposes. It creates:
+# 1. Deed of Assignment documents
+# 2. Property metadata files
+# 3. Varied registration dates
+#
+# The generated data simulates real-world scenarios including:
+# - Title disputes
+# - Financial pledges
+# - Government revocations
+# - Clean records
+# =================================================================
 
 import json
 import os

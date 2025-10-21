@@ -1,4 +1,33 @@
+# =================================================================
+# Core Dependencies
+# =================================================================
+
+# Google Gemini AI SDK
+# Required for AI-powered risk analysis
+# Version compatible with latest Gemini Pro model
 google-generativeai
+
+# Environment Variable Management
+# Used for secure API key storage
+# Prevents hardcoding sensitive information
 python-dotenv
+
+# Data Processing
+# Required for handling CSV files and data manipulation
+# Used in registry data processing
 pandas
+
+# Test Data Generation
+# Used to create realistic mock data
+# Helps in development and testing
 faker
+
+# =================================================================
+# Installation Instructions:
+# =================================================================
+# 1. Run: pip install -r requirements.txt
+# 2. Create .env file with your Gemini API key
+# 3. Ensure all dependencies install correctly
+# 
+# Note: Some packages might require additional system dependencies
+# on certain operating systems.

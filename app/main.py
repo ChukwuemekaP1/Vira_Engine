@@ -1,13 +1,24 @@
-# VERA AI - SPRINT 2 (GEMINI API - DEBUGGING VERSION)
-# This is the definitive script for debugging the Gemini API connection issue.
-# It uses the robust ChatSession method.
+# =================================================================
+# Vira Engine - Main Application Module
+# =================================================================
+# This is the core module of the Vira Engine that handles property
+# risk analysis using Google's Gemini AI. It processes multiple data
+# sources to identify potential risks in Nigerian real estate
+# transactions.
+#
+# Key Features:
+# - Multi-source data integration
+# - AI-powered risk analysis
+# - Structured output format
+# - Error handling and logging
+# =================================================================
 
 import os
 import json
 import sys
 import traceback
-import google.generativeai as genai
-import pandas as pd
+import google.generativeai as genai  # Gemini AI SDK for risk analysis
+import pandas as pd  # For handling structured data
 
 # ========================================
 # CONFIGURATION
