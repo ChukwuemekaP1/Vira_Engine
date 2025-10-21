@@ -1,0 +1,26 @@
+{
+  "name": "Vera AI Asset: NGA-AWK-001",
+  "description": "Tokenized asset representing property in Udoka Housing Estate, Anambra. Owned by Anambra Digital Hub Ltd..",
+  "attributes": [
+    {
+      "trait_type": "Human-Readable ID",
+      "value": "NGA-AWK-001"
+    },
+    {
+      "trait_type": "Deed of Assignment Path",
+      "value": "nigeria_demo_data\\NGA-AWK-001_Deed_of_Assignment.txt"
+    },
+    {
+      "trait_type": "Public News API Path",
+      "value": "nigeria_demo_data\\Nigerian_Gazette_Alerts.json"
+    },
+    {
+      "trait_type": "Land Registry File Path",
+      "value": "nigeria_demo_data\\Nigerian_Land_Registry_Mock.csv"
+    },
+    {
+      "trait_type": "Registry Search Key",
+      "value": "C-OF-O-AWK-001"
+    }
+  ]
+}

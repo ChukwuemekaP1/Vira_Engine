@@ -1,0 +1,15 @@
+*** DEED OF ASSIGNMENT (SUMMARY) ***
+
+ASSET_TOKEN_ID: NGA-LAG-002
+DATE_OF_EXECUTION: 2022-05-10
+
+PARTIES:
+- ASSIGNOR (SELLER): Mr. John Doe (Simulated)
+- ASSIGNEE (BUYER): Global Shipping Inc.
+
+PROPERTY_DETAILS:
+- DESCRIPTION: All that piece or parcel of land situated at Plot 101, Block 2, Apapa, Lagos State, Nigeria.
+- LAND_REGISTRY_ID: C-OF-O-LAG-002
+
+NOTES:
+- Certificate of Occupancy was revoked by Lagos State Government notice.

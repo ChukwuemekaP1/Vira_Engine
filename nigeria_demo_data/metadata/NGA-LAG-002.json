@@ -1,0 +1,26 @@
+{
+  "name": "Vera AI Asset: NGA-LAG-002",
+  "description": "Tokenized asset representing property in Apapa, Lagos. Owned by Global Shipping Inc..",
+  "attributes": [
+    {
+      "trait_type": "Human-Readable ID",
+      "value": "NGA-LAG-002"
+    },
+    {
+      "trait_type": "Deed of Assignment Path",
+      "value": "nigeria_demo_data\\NGA-LAG-002_Deed_of_Assignment.txt"
+    },
+    {
+      "trait_type": "Public News API Path",
+      "value": "nigeria_demo_data\\Nigerian_Gazette_Alerts.json"
+    },
+    {
+      "trait_type": "Land Registry File Path",
+      "value": "nigeria_demo_data\\Nigerian_Land_Registry_Mock.csv"
+    },
+    {
+      "trait_type": "Registry Search Key",
+      "value": "C-OF-O-LAG-002"
+    }
+  ]
+}

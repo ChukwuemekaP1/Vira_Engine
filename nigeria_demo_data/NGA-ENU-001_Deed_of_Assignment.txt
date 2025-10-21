@@ -1,0 +1,15 @@
+*** DEED OF ASSIGNMENT (SUMMARY) ***
+
+ASSET_TOKEN_ID: NGA-ENU-001
+DATE_OF_EXECUTION: 2023-11-30
+
+PARTIES:
+- ASSIGNOR (SELLER): Mr. John Doe (Simulated)
+- ASSIGNEE (BUYER): Eastern Minerals Corp.
+
+PROPERTY_DETAILS:
+- DESCRIPTION: All that piece or parcel of land situated at Plot 22, Block 3, Independence Layout, Enugu State, Nigeria.
+- LAND_REGISTRY_ID: C-OF-O-ENU-001
+
+NOTES:
+- Asset is pledged as collateral against a corporate loan with FirstBank PLC.

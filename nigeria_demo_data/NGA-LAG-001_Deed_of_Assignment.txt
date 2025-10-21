@@ -1,0 +1,15 @@
+*** DEED OF ASSIGNMENT (SUMMARY) ***
+
+ASSET_TOKEN_ID: NGA-LAG-001
+DATE_OF_EXECUTION: 2024-01-15
+
+PARTIES:
+- ASSIGNOR (SELLER): Mr. John Doe (Simulated)
+- ASSIGNEE (BUYER): RealVest Nigeria PLC
+
+PROPERTY_DETAILS:
+- DESCRIPTION: All that piece or parcel of land situated at Plot 15, Block 10, Lekki Scheme 1, Lagos State, Nigeria.
+- LAND_REGISTRY_ID: C-OF-O-LAG-001
+
+NOTES:
+- Assignee is a major property development company.

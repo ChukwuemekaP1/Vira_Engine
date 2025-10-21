@@ -1,0 +1,15 @@
+*** DEED OF ASSIGNMENT (SUMMARY) ***
+
+ASSET_TOKEN_ID: NGA-AWK-002
+DATE_OF_EXECUTION: 2021-08-19
+
+PARTIES:
+- ASSIGNOR (SELLER): Mr. John Doe (Simulated)
+- ASSIGNEE (BUYER): The Okeke Family Trust
+
+PROPERTY_DETAILS:
+- DESCRIPTION: All that piece or parcel of land situated at Plot 34, Block 12, Agu-Awka, Anambra State, Nigeria.
+- LAND_REGISTRY_ID: C-OF-O-AWK-002
+
+NOTES:
+- Property held in a multi-generational family trust.

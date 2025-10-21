@@ -1,0 +1,26 @@
+{
+  "name": "Vera AI Asset: NGA-ENU-001",
+  "description": "Tokenized asset representing property in Independence Layout, Enugu. Owned by Eastern Minerals Corp..",
+  "attributes": [
+    {
+      "trait_type": "Human-Readable ID",
+      "value": "NGA-ENU-001"
+    },
+    {
+      "trait_type": "Deed of Assignment Path",
+      "value": "nigeria_demo_data\\NGA-ENU-001_Deed_of_Assignment.txt"
+    },
+    {
+      "trait_type": "Public News API Path",
+      "value": "nigeria_demo_data\\Nigerian_Gazette_Alerts.json"
+    },
+    {
+      "trait_type": "Land Registry File Path",
+      "value": "nigeria_demo_data\\Nigerian_Land_Registry_Mock.csv"
+    },
+    {
+      "trait_type": "Registry Search Key",
+      "value": "C-OF-O-ENU-001"
+    }
+  ]
+}
