@@ -144,20 +144,64 @@ def run_llm_investigation(token_id: str) -> dict:
         return None
 
 # ========================================
+# --- Task 2.3: Create Core Analysis Function ---
+# ========================================
+def perform_asset_analysis(token_id: str) -> dict:
+    """
+    Orchestrates the full asset risk analysis for a given token_id.
+    This function acts as the main entry point for the API.
+    """
+    print(f"\n[Core Analysis] Starting full analysis for token_id: '{token_id}'")
+    
+    # Start with a default "failed" report structure.
+    # This ensures we always return a consistent format, even on error.
+    final_report = {
+        "token_id": token_id,
+        "status": "Failed",
+        "risk_assessment": {"potential_risk_type": "Analysis Error"},
+        "details": "An unexpected error occurred during analysis."
+    }
+
+    try:
+        # Call the LLM investigator function that you just fixed.
+        llm_result = run_llm_investigation(token_id)
+        
+        # Check if the result from the LLM is valid.
+        if llm_result and "potential_risk_type" in llm_result:
+            # If successful, update the report.
+            final_report["status"] = "Success"
+            final_report["risk_assessment"] = llm_result
+            final_report["details"] = "LLM investigation completed successfully."
+        else:
+            # Handle cases where the LLM might return an empty or malformed response.
+            final_report["status"] = "Partial Success"
+            final_report["risk_assessment"] = {"potential_risk_type": "Unknown Risk"}
+            final_report["details"] = "LLM investigation returned an unexpected or empty result."
+            print(f"[Core Analysis] Warning: LLM result was unexpected: {llm_result}")
+
+    except Exception as e:
+        # Catch any critical errors during the process.
+        final_report["details"] = f"Critical error during LLM investigation: {e}"
+        print(f"[Core Analysis] Critical error: {e}")
+        traceback.print_exc()
+
+    print(f"[Core Analysis] Analysis complete for {token_id}.")
+    return final_report
+
+# ========================================
 # MAIN EXECUTION
 # ========================================
 if __name__ == "__main__":
     print("\n" + "="*50)
-    print("--- VERA AI | SPRINT 2: DEBUGGING GEMINI ---")
+    print("--- VERA AI | SPRINT 3: CORE ANALYSIS FUNCTION ---")
     print("="*50)
     
     test_token_id = "NGA-LAG-001"
-    investigation_result = run_llm_investigation(test_token_id)
     
-    if investigation_result:
-        print("\n[Result] LLM Investigation Complete.")
-        print(json.dumps(investigation_result, indent=2))
-    else:
-        print("\n[Result] LLM Investigation failed.")
+    # Test the new perform_asset_analysis function
+    analysis_result = perform_asset_analysis(test_token_id)
+    
+    print("\n[Result] Asset Analysis Complete.")
+    print(json.dumps(analysis_result, indent=2))
 
-    print("\n--- SPRINT 2 DEBUGGING COMPLETE ---")
+    print("\n--- SPRINT 3 COMPLETE ---")
