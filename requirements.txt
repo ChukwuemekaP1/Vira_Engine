@@ -31,3 +31,6 @@ faker
 # 
 # Note: Some packages might require additional system dependencies
 # on certain operating systems.
+
+fastapi
+uvicorn

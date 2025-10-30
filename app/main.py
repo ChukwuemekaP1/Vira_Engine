@@ -163,17 +163,26 @@ def perform_asset_analysis(token_id: str) -> dict:
     }
 
     try:
-        # Call the LLM investigator function that you just fixed.
+        # Call the LLM investigator function.
         llm_result = run_llm_investigation(token_id)
         
-        # Check if the result from the LLM is valid.
-        if llm_result and "potential_risk_type" in llm_result:
+        # Check for errors returned from the investigator.
+        if llm_result and "error" in llm_result:
+            final_report["details"] = llm_result.get("message", "LLM investigation failed.")
+            # Specifically check for the "Asset not found" error to set the status correctly.
+            if llm_result.get("message") == "Asset not found.":
+                final_report["status"] = "Not Found"
+                final_report["risk_assessment"]["potential_risk_type"] = "Asset Not Found"
+            print(f"[Core Analysis] LLM investigation failed: {final_report['details']}")
+
+        # Check if the result from the LLM is valid and successful.
+        elif llm_result and "potential_risk_type" in llm_result:
             # If successful, update the report.
             final_report["status"] = "Success"
             final_report["risk_assessment"] = llm_result
             final_report["details"] = "LLM investigation completed successfully."
         else:
-            # Handle cases where the LLM might return an empty or malformed response.
+            # Handle cases where the LLM might return an unexpected or empty response.
             final_report["status"] = "Partial Success"
             final_report["risk_assessment"] = {"potential_risk_type": "Unknown Risk"}
             final_report["details"] = "LLM investigation returned an unexpected or empty result."
